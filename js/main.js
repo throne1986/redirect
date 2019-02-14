@@ -1,49 +1,12 @@
-$(document).ready(function(){
-    var info = {
-        car_driver: "Jeff",
-        car_speed: 80,
-        car_manufaacturer: "BMW",
-        car_model: 200,
-        car_color: "color",
-        // car_status: function(){
-        //        return this.car_color + " " + this.car_driver;
-        // }
-    }
-    console.log(info);
 
-var text = "";
-var x;
-  for(x in info){
-      info.nationality ="Tanzania";
-      console.log(info.nationality);
-      text =info[x];   
-      document.getElementById('car_details').innerHTML += text + "<br>";
-    //   document.getElementById('car_status').innerHTML = text
+(function () {
+  var compareDate = new Date('Feb 18 2019 00:00:00');
+  var curDate = new Date();
+  if(curDate.getTime() > compareDate.getTime()){
+    window.location.replace('http://www.google.com')
+    console.log(curDate);
+    console.log(compareDate);
+  }else {
+        window.location.href="http://www.yahoo.com";
   }
-  
-
-  // object constructor 
-  function Person(first, last, age, eye){
-      this.firsname = first;
-      this.lastname= last;
-      this.age =age;
-      this.eye = eye;
-      this.nationality ="Kenya";
-  }
-
-  var myDaughter = new Person("Geofrey", "Zellah", 23, "black");
-  console.log(myDaughter);
-  var myMother = new Person("Joyce", "Zellah", 23, "black");
-  console.log(myMother);
-
-  function multiply(x, y){
-      return x*y;
-  }
- console.log(multiply(2,3));
-
- var m =(x,y) =>x*y;
- console.log(m(2,3));
-
- var m2 =(x,y,z) =>(x*y/z);
- console.log(m2(3,3,4));
-});
+})();
